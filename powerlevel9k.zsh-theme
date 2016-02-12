@@ -618,8 +618,8 @@ prompt_ram() {
 
 # rbenv information
 prompt_rbenv() {
-  if [[ -n "$RBENV_VERSION" ]]; then
-    "$1_prompt_segment" "$0" "$2" "red" "$DEFAULT_COLOR" "$RBENV_VERSION" 'RUBY_ICON'
+  if which rbenv &> /dev/null; then
+    "$1_prompt_segment" "$0" "$2" "red" "$DEFAULT_COLOR" "$(rbenv version-name)" 'RUBY_ICON'
   fi
 }
 

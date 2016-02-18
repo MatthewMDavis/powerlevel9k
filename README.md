@@ -1,5 +1,6 @@
 ## powerlevel9k Theme for ZSH
 
+[![Build Status](https://travis-ci.org/bhilburn/powerlevel9k.svg?branch=next)](https://travis-ci.org/bhilburn/powerlevel9k)
 [![Join the chat at https://gitter.im/bhilburn/powerlevel9k](https://badges.gitter.im/bhilburn/powerlevel9k.svg)](https://gitter.im/bhilburn/powerlevel9k?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Powerlevel9k is a theme for ZSH which uses [Powerline
@@ -97,12 +98,13 @@ The segments that are currently available are:
 * **nvm** - Show the version of Node that is currently active, if it differs from the version used by NVM
 * **os_icon** - Display a nice little icon, depending on your operating system.
 * **php_version** - Show the current PHP version.
-* [ram](#ram) - Show free RAM and used Swap.
+* **ram** - Show free RAM
 * [rbenv](#rbenv) - Ruby environment information (if one is active).
 * **root_indicator** - An indicator if the user is root.
 * [rspec_stats](#rspec_stats) - Show a ratio of test classes vs code classes for RSpec.
 * **rust_version** - Display the current rust version.
 * [status](#status) - The return code of the previous command.
+* **swap** - Prints the current swap size.
 * [symphony2_tests](#symphony2_tests) - Show a ratio of test classes vs code classes for Symfony2.
 * **symphony2_version** - Show the current Symfony2 version, if you are in a Symfony2-Project dir.
 * [time](#time) - System time.
@@ -256,12 +258,6 @@ This segment shows the return code of the last command.
 |----------|---------------|-------------|
 |`POWERLEVEL9K_STATUS_VERBOSE`|`true`|Set to false if you wish to hide this segment when the last command completed successfully.|
 
-##### ram
-
-| Variable | Default Value | Description |
-|----------|---------------|-------------|
-|`POWERLEVEL9K_RAM_ELEMENTS`|Both|Specify `ram_free` or `swap_used` to only show one or the other rather than both.|
-
 ##### symphony2_tests
 
 See [Unit Test Ratios](#unit-test-ratios), below.
@@ -293,6 +289,7 @@ customization is provided via:
 |`POWERLEVEL9K_HIDE_BRANCH_ICON`|`false`|Set to `true` to hide the branch icon from the segment.|
 |`POWERLEVEL9K_SHOW_CHANGESET`|`false`|Set to `true` to display the hash / changeset in the segment.|
 |`POWERLEVEL9K_CHANGESET_HASH_LENGTH`|`12`|How many characters of the hash / changeset to display in the segment.|
+|`POWERLEVEL9K_VCS_SHOW_SUBMODULE_DIRTY`|`true`|Set to `false` to not reflect submodule status in the top-level repository prompt.|
 
 **vcs Symbols**
 
